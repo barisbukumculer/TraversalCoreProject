@@ -1,6 +1,8 @@
 ﻿using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 using TraversalCoreProject.Areas.Member.Models;
@@ -28,10 +30,29 @@ namespace TraversalCoreProject.Areas.Member.Controllers
             userEditViewModel.mail= values.Email;
             return View(userEditViewModel);
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Index(UserEditViewModel userEditViewModel)
-        //{
-        //    return View();
-        //}
+        [HttpPost]
+        public async Task<IActionResult> Index(UserEditViewModel userEditViewModel)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if(userEditViewModel.Image != null)
+            {
+                var resource=Directory.GetCurrentDirectory();
+                var extension=Path.GetExtension(userEditViewModel.Image.FileName);
+                var imagename=Guid.NewGuid()+extension;
+                var savelocation = resource + "/wwwroot/userimages/" + imagename;
+                var stream= new FileStream(savelocation, FileMode.Create);
+                await userEditViewModel.Image.CopyToAsync(stream);
+                user.ImageURL = imagename;
+            }
+            user.Name = userEditViewModel.name;
+            user.Surname = userEditViewModel.surname;
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, userEditViewModel.password);
+            var result=await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("SignIn", "Login");
+            }
+            return View();
+        }
     }
 }
