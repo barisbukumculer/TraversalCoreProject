@@ -85,8 +85,11 @@ Author URL: http://w3layouts.com
 							<input type="password"  asp-for="ConfirmPassword" />
 							<span asp-validation-for="ConfirmPassword"></span>
 						</div>
+						<div class="text-danger" asp-validation-summary="ModelOnly">
+
+						</div>
 						<label class="container">
-							Şartları Okudum<a href="#">Kabul Ediyorum</a>
+							Şartları Okudum: <a href="#">Kabul Ediyorum</a>
 							<input type="checkbox">
 							<span class="checkmark"></span>
 						</label>
