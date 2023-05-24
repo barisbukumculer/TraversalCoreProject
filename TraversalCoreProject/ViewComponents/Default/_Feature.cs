@@ -3,10 +3,11 @@ using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TraversalCoreProject.ViewComponents
+namespace TraversalCoreProject.ViewComponents.Default
 {
-    public class _Feature:ViewComponent
+    public class _Feature : ViewComponent
     {
+        FeatureManager featureManager = new FeatureManager(new EfFeatureDal());
         public IViewComponentResult Invoke()
         {
             return View();
