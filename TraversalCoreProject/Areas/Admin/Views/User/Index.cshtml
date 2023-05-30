@@ -28,7 +28,7 @@
             <td>@item.UserName</td>
             <td>@item.Email</td>
             @*<td><a href="/Admin/User/DeleteUser/@item.Id" id="btn1" class="btn btn-outline-danger">Sil</a></td>*@
-            <td><a href="/Admin/User/DeleteUser/@item.Id" class="btn btn-outline-danger" onclick="return confirm('Bu kişiyi kalıcı olarak silmek istediğinize emin misiniz?');">Delete</a></td>
+            <td><a href="/Admin/User/DeleteUser/@item.Id" class="btn btn-outline-danger" onclick="return confirm('Bu kişiyi kalıcı olarak silmek istediğinize emin misiniz?');">Sil</a></td>
             <td><a href="/Admin/User/EditUser/@item.Id" class="btn btn-outline-success">Düzenle</a></td>
             <td><a href="/Admin/User/CommentUser/@item.Id" class="btn btn-outline-info">Yorumlar</a></td>
             <td><a href="/Admin/User/ReservationUser/@item.Id" class="btn btn-outline-secondary">Tur Geçmişi</a></td>
@@ -36,4 +36,4 @@
     }
 </table>
 
-<a href="/Admin/User/AddUser/" class="btn btn-outline-primary">Yeni Kullancı Kaydı</a>
+<a href="/Login/SignUp/" class="btn btn-outline-primary">Yeni Kullancı Kaydı</a>
