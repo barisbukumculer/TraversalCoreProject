@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraversalCoreProject", "TraversalCoreProject\TraversalCoreProject.csproj", "{16E867E5-C537-48C0-9398-E33233D0E8E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraversalCoreProject", "TraversalCoreProject\TraversalCoreProject.csproj", "{16E867E5-C537-48C0-9398-E33233D0E8E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{FCB8EB8D-E9C5-4803-8140-C70B3066BC07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{FCB8EB8D-E9C5-4803-8140-C70B3066BC07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{D02F8D09-4DF2-4EB0-AD67-9329B6875D87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{D02F8D09-4DF2-4EB0-AD67-9329B6875D87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{D8FC866D-53BE-400D-9305-7A5D8ACA8D02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{D8FC866D-53BE-400D-9305-7A5D8ACA8D02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtoLayer", "DtoLayer\DtoLayer.csproj", "{F7E17795-0B4C-4F79-A891-79FBBDFE9240}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D8FC866D-53BE-400D-9305-7A5D8ACA8D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8FC866D-53BE-400D-9305-7A5D8ACA8D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8FC866D-53BE-400D-9305-7A5D8ACA8D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E17795-0B4C-4F79-A891-79FBBDFE9240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E17795-0B4C-4F79-A891-79FBBDFE9240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E17795-0B4C-4F79-A891-79FBBDFE9240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E17795-0B4C-4F79-A891-79FBBDFE9240}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
