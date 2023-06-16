@@ -9,6 +9,7 @@ using DtoLayer.DTOs.AnnouncementDTOs;
 using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,6 +24,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using TraversalCoreProject.CQRS.Handlers.DestinationHandlers;
+using TraversalCoreProject.CQRS.Results.DestinationResults;
 using TraversalCoreProject.Models;
 
 namespace TraversalCoreProject
@@ -39,6 +42,16 @@ namespace TraversalCoreProject
         // This method gets called by the runtime. Use this method to add servicess to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddScoped<GetAllDestinationQueryHandler>();
+            services.AddScoped<GetDestinationByIDQueryHandler>();
+            services.AddScoped<CreateDestinationCommandHandler>();
+            services.AddScoped<RemoveDestinationCommandHandler>();
+            services.AddScoped<UpdateDestinationCommandHandler>();
+
+
+            services.AddMediatR(typeof(Startup));
+
             services.AddLogging(x =>
             {
                 x.ClearProviders();

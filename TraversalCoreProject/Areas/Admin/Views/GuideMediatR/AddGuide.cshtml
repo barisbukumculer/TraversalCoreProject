@@ -1,0 +1,18 @@
+﻿@model TraversalCoreProject.CQRS.Commands.GuideCommands.CreateGuideCommand
+@{
+    ViewData["Title"] = "AddGuide";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Rehber Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Rehber Adı</label>
+    <input type="text" asp-for="GuideName" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-info">Rehberi Ekle</button>
+</form>

@@ -23,9 +23,9 @@
             <td>@item.Price₺</td>
             <td>@item.Capacity</td>
             <td><a href="/Destination/DestinationDetails/@item.DestinationID" class="btn btn-outline-info">Sitede Göre</a></td>
-            <td><a href="/Admin/Destination/DeleteDestination/@item.DestinationID" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="/Admin/Destination/UpdateDestination/@item.DestinationID" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/Admin/DestinationCQRS/DeleteDestination/@item.DestinationID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/DestinationCQRS/GetDestination/@item.DestinationID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
-<a href="/Admin/Destination/AddDestination/"class="btn btn-outline-primary">Yeni Tur Rotası</a>
+<a href="/Admin/DestinationCQRS/AddDestination/" class="btn btn-outline-primary">Yeni Tur Rotası</a>
