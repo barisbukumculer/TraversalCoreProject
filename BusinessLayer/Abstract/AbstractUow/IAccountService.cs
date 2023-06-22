@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace BusinessLayer.Abstract.AbstractUow
 {
-    public interface IDestinationDal:IGenericDal<Destination>
+    public interface IAccountService:IGenericUowService<Account>
     {
-        public Destination GetDestinationsWithGuide(int id);
     }
 }
