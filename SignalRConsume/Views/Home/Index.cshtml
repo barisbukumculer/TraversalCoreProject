@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section scripts{
+
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(()=>{
+
+            var connection = new signalR.HubConnectionBuilder().withUrl("http://localhost:40294/VisitorHub").build();
+            $("#ConnectionStatus").text(connection.connectionState);
+            connection.start().then(()=>{
+                $("#ConnectionStatus").text(connection.connectionState);
+            }).catch((err)=>{console.log(err)});
+    })    
+    </script>
+}
+
+<div class="container">
+    <br />
+    <div class="alert alert-warning">
+        Bağlantınızın Durumu: <b id="ConnectionStatus"></b>
+    </div>
+</div>
